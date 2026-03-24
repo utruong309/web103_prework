@@ -4,16 +4,16 @@ import ShowCreators from "./pages/ShowCreators";
 import ViewCreator from "./pages/ViewCreator";
 import AddCreator from "./pages/AddCreator";
 import EditCreator from "./pages/EditCreator";
+import Home from "./pages/Home";
 
 function App() {
-  const routes = useRoutes([
-    { path: "/", element: <ShowCreators /> },
+  return useRoutes([
+    { path: "/", element: <Home /> },
+    { path: "/creators", element: <ShowCreators /> },
     { path: "/creator/:id", element: <ViewCreator /> },
     { path: "/add", element: <AddCreator /> },
     { path: "/edit/:id", element: <EditCreator /> }
   ]);
-
-  return routes;
 }
 
 export default App;
