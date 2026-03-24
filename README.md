@@ -47,7 +47,6 @@ The following **optional** features are implemented:
 - **Supabase client** uses `async`/`await` for `select`, `insert`, `update`, and `delete`.  
 - For the assignment demo, **add at least five creators** in the app (or seed them in Supabase) before recording your walkthrough so the “five on homepage” requirement is visible.  
 - Visiting `/` redirects to `/creators`; that view acts as the main “homepage” browse experience.  
-- **Picocss** is not used; styling is custom in `index.css`.  
 
 ## License
 
