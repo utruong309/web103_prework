@@ -2,7 +2,7 @@
 
 Submitted by: **Uyen Truong**
 
-About this web app: **Creatorverse is a React app using Supabase. Users browse creators on the main creators view, open a detail page per creator, add new creators, edit them with a full prefilled form, and delete them. Cards show name, image, description, and links to social/profile URLs.**
+About this web app: Creatorverse is a React app using Supabase. Users browse creators on the main creators view, open a detail page per creator, add new creators, edit them, and delete them. Cards show name, image, description, and links to social/profile URLs.
 
 Time spent: **5** hours
 
@@ -36,10 +36,11 @@ The following **optional** features are implemented:
 * **Delete** from the detail view with confirmation  
 
 ## Video Walkthrough
-
-Here's a walkthrough of implemented required features:
-
-<img src='https://imgur.com/O41Qm8E' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<p align="center">
+  <a href="https://imgur.com/O41Qm8E">
+    <img src="https://i.imgur.com/O41Qm8E.png" width="600"/>
+  </a>
+</p>
 
 ## Notes
 
