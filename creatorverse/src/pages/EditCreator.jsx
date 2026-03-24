@@ -59,7 +59,7 @@ function EditCreator() {
       return;
     }
 
-    navigate(`/#browse`);
+    navigate("/creators");
   }
 
   if (loading) {

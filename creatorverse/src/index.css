@@ -163,8 +163,13 @@ body {
   opacity: 0.94;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.home-layout-outlet .page-form {
+  min-height: auto;
 }
 
 .page-form {

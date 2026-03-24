@@ -33,7 +33,7 @@ function ViewCreator() {
       return;
     }
 
-    navigate("/#browse");
+    navigate("/creators");
   }
 
   return (
