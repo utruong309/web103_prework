@@ -25,7 +25,7 @@ function ViewCreator() {
     <div>
       <h1>{creator.name}</h1>
       <p>{creator.description}</p>
-      <a href={creator.url}>Visit</a>
+      <a href={creator.url} target="_blank">Visit</a>
     </div>
   );
 }
