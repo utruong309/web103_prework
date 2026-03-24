@@ -1,11 +1,14 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { supabase } from "../client";
+import ConfirmModal from "../components/ConfirmModal";
 
 function ViewCreator() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [creator, setCreator] = useState(null);
+  const [deleteOpen, setDeleteOpen] = useState(false);
+  const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
     async function fetchCreator() {
@@ -22,17 +25,17 @@ function ViewCreator() {
 
   if (!creator) return <p>Loading...</p>;
 
-  async function handleDelete(e) {
-    e.preventDefault();
-    const ok = window.confirm("Delete this creator? This cannot be undone.");
-    if (!ok) return;
-
+  async function confirmDelete() {
+    setDeleting(true);
     const { error } = await supabase.from("creators").delete().eq("id", id);
+    setDeleting(false);
+
     if (error) {
       console.error(error);
       return;
     }
 
+    setDeleteOpen(false);
     navigate("/creators");
   }
 
@@ -88,9 +91,10 @@ function ViewCreator() {
         </Link>
       </div>
 
-      <form onSubmit={handleDelete}>
+      <div>
         <button
-          type="submit"
+          type="button"
+          onClick={() => setDeleteOpen(true)}
           style={{
             background: "#ef4444",
             color: "var(--text-hero)",
@@ -105,7 +109,19 @@ function ViewCreator() {
         >
           Delete Creator
         </button>
-      </form>
+      </div>
+
+      <ConfirmModal
+        open={deleteOpen}
+        title="Remove this creator?"
+        message={`“${creator.name}” will be deleted permanently from Creatorverse. This can’t be undone.`}
+        confirmLabel="Delete permanently"
+        cancelLabel="Keep creator"
+        confirming={deleting}
+        onCancel={() => !deleting && setDeleteOpen(false)}
+        onConfirm={confirmDelete}
+        danger
+      />
     </div>
   );
 }
