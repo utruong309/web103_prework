@@ -31,7 +31,7 @@ The following **optional** features are implemented:
 ## Additional Features
 
 * Shared **HomeLayout** with hero header and routes for browsing (`/creators`) vs adding (`/add`) under the same UI shell  
-* Consistent **custom CSS** theme (dark UI, accent buttons, form styling)  
+* Consistent **custom CSS** theme (accent buttons, form styling)  
 * Edit form mirrors add form, including **image URL** field, with Supabase **update**  
 * **Delete** from the detail view with confirmation  
 
